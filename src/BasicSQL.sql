@@ -1,0 +1,20 @@
+INSERT INTO EXHIBITS
+VALUES (3, 'Asian Elephant', 7.5);
+
+SELECT *
+FROM EXHIBITS
+WHERE ID = 3;
+
+SELECT name, NUM_ACRES
+FROM EXHIBITS
+WHERE ID= 3;
+
+SELECT count(*) , sum(NUM_ACRES)
+from  EXHIBITS;
+
+UPDATE EXHIBITS
+SET NUM_ACRES = NUM_ACRES + .5
+where NAME = 'Asian Elephant';
+
+DELETE from EXHIBITS
+where NAME = 'Asian Elephant';
