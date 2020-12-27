@@ -7,10 +7,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://C:/Program Files/Java/jdk-14.0.2/db/db-derby-10.15.2.0-lib/lib/derby.jar!/" />
+          <root url="jar://C:/Program Files/Java/jdk-15.0.1/db/db-derby-10.15.2.0-lib/lib/derby.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

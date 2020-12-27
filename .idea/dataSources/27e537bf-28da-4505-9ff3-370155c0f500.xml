@@ -32,12 +32,12 @@
       <Position>3</Position>
       <DataType>DECIMAL(4,1)|3s</DataType>
     </column>
-    <index id="18" parent="13" name="SQL0000000081-36e280fc-0175-d46d-319d-00000f737098">
+    <index id="18" parent="13" name="SQL0000000000-0b3e4052-0176-a66c-362c-00001f57c4c0">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="19" parent="13" name="SQL0000000081-36e280fc-0175-d46d-319d-00000f737098">
+    <key id="19" parent="13" name="SQL0000000000-0b3e4052-0176-a66c-362c-00001f57c4c0">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
@@ -55,25 +55,25 @@
       <Position>3</Position>
       <DataType>VARCHAR(255)|12s</DataType>
     </column>
-    <index id="23" parent="14" name="SQL0000000082-c0a0c103-0175-d46d-319d-00000f737098">
+    <index id="23" parent="14" name="SQL0000000001-03d30059-0176-a66c-362c-00001f57c4c0">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="24" parent="14" name="SQL0000000083-f8e18104-0175-d46d-319d-00000f737098">
+    <index id="24" parent="14" name="SQL0000000002-cbe9405a-0176-a66c-362c-00001f57c4c0">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>SPECIES_ID</ColNames>
     </index>
-    <key id="25" parent="14" name="SQL0000000082-c0a0c103-0175-d46d-319d-00000f737098">
+    <key id="25" parent="14" name="SQL0000000001-03d30059-0176-a66c-362c-00001f57c4c0">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="26" parent="14" name="SQL0000000083-f8e18104-0175-d46d-319d-00000f737098">
+    <foreign-key id="26" parent="14" name="SQL0000000002-cbe9405a-0176-a66c-362c-00001f57c4c0">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>SPECIES_ID</ColNames>
       <RefTableName>EXHIBITS</RefTableName>
-      <RefKeyName>SQL0000000081-36e280fc-0175-d46d-319d-00000f737098</RefKeyName>
+      <RefKeyName>SQL0000000000-0b3e4052-0176-a66c-362c-00001f57c4c0</RefKeyName>
       <RefColNames>ID</RefColNames>
     </foreign-key>
   </database-model>

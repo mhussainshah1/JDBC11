@@ -6,8 +6,8 @@ public class SetupDerbyDatabase {
         String url = "jdbc:derby:zoo;create=true";
         try (Connection conn = DriverManager.getConnection(url)) {
 
-            // run(conn,"DROP TABLE names");
-            // run(conn,"DROP TABLE exhibits");
+             run(conn,"DROP TABLE names");
+             run(conn,"DROP TABLE exhibits");
 
             run(conn,"CREATE TABLE exhibits ("
                     + "id INTEGER PRIMARY KEY, "
