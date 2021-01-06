@@ -16,10 +16,12 @@ public class SetupHsqlDatabase {
             run(conn, "DROP TABLE names IF EXISTS");
             run(conn, "DROP TABLE exhibits IF EXISTS");
 
-            run(conn, "CREATE TABLE exhibits ("
-                    + "id INTEGER PRIMARY KEY, "
-                    + "name VARCHAR(255), "
-                    + "num_acres DECIMAL(4,1))");
+            run(conn, """
+                    CREATE TABLE exhibits (
+                    id INTEGER PRIMARY KEY, 
+                    name VARCHAR(255), 
+                    num_acres DECIMAL(4,1))            
+                    """);
 
             run(conn, "CREATE TABLE names ("
                     + "id INTEGER PRIMARY KEY, "

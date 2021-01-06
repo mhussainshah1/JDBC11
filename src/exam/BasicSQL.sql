@@ -22,3 +22,9 @@ create table RECRUITING
     ID   INTEGER,
     NAME VARCHAR(20)
 );
+
+CREATE TABLE PAIR
+(
+    LEFT  VARCHAR(10),
+    RIGHT VARCHAR(10)
+);
