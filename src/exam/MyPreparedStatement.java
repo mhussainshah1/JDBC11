@@ -27,7 +27,7 @@ import java.sql.SQLException;
 public class MyPreparedStatement {
 
     public static void main(String[] args) throws SQLException {
-        try (var conn = DriverManager.getConnection("jdbc:derby:exam");
+        try (var conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/exam","root","password");
             // var delete = conn.prepareStatement("DELETE FROM RECRUITING");
              var query = conn.prepareStatement("SELECT ID, NAME FROM EMP WHERE DEPT = ?");//return 2 rows
              var update = conn.prepareStatement("INSERT INTO RECRUITING (ID , NAME) VALUES(?, ?)")) {//return 1 row

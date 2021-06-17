@@ -15,7 +15,7 @@ public class WrongSQL {
 //        }
 
         sql = "UPDATE exhibits SET name = '' WHERE name = 'None'";
-        try (Connection conn = DriverManager.getConnection("jdbc:derby:zoo");
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/zoo", "root", "password");
              PreparedStatement ps = conn.prepareStatement(sql)) {
             var result = ps.executeQuery();
             //Statement.executeQuery() cannot be called with a statement that returns a row count.

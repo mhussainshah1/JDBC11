@@ -15,9 +15,12 @@ public class ResourceLeak {
     }
 
     public static void bad() throws SQLException{
-        var url = "jdbc:derby:zoo";
+//        var url = "jdbc:derby:zoo";
+        String url ="jdbc:mysql://localhost:3306/zoo";
+        String user = "root";
+        String password = "password";
         var sql ="SELECT not_a_column FROM names";
-        var conn = DriverManager.getConnection(url);
+        var conn = DriverManager.getConnection(url,user,password);
         var ps = conn.prepareStatement(sql);
         var rs = ps.executeQuery();
 

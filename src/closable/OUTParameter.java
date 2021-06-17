@@ -6,9 +6,13 @@ import java.sql.Types;
 
 public class OUTParameter {
     public static void main(String[] args) throws SQLException {
-        String url = "jdbc:hsqldb:file:zoo_procedure";
-        var sql = "{?= call magic_number(?) }";
-        try (var conn = DriverManager.getConnection(url);
+//        String url = "jdbc:hsqldb:file:zoo_procedure";
+        String url = "jdbc:mysql://localhost:3306/zoo";
+        String user = "root";
+        String password = "password";
+//        var sql = "{?= call magic_number(?) }";
+        var sql = "{call magic_number(?) }";
+        try (var conn = DriverManager.getConnection(url,user,password);
              var cs = conn.prepareCall(sql)) {
             cs.registerOutParameter(1, Types.INTEGER);
             cs.execute();

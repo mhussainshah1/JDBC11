@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="HSQLDB (Local) - zoo_procedure" uuid="f4f4ef87-8424-4cd4-bfad-18299474e15a">
-      <driver-ref>hsqldb.local</driver-ref>
+    <data-source source="LOCAL" name="zoo@localhost" uuid="da0de8c7-b140-448a-b8c0-750b7b2bfd8b">
+      <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.hsqldb.jdbc.JDBCDriver</jdbc-driver>
-      <jdbc-url>jdbc:hsqldb:file:zoo_procedure</jdbc-url>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/zoo</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
-    <data-source source="LOCAL" name="Apache Derby (Embedded) - zoo" uuid="c3f0a06c-d8d0-48e3-92a4-6665776d89bb">
-      <driver-ref>derby.embedded</driver-ref>
+    <data-source source="LOCAL" name="exam@localhost" uuid="75961efe-87f5-4b7b-b58f-31bc2be02140">
+      <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <jdbc-driver>org.apache.derby.jdbc.EmbeddedDriver</jdbc-driver>
-      <jdbc-url>jdbc:derby:zoo</jdbc-url>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/exam</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

@@ -3,8 +3,11 @@ import java.sql.*;
 public class SetupDerbyDatabase {
 
     public static void main(String[] args) throws Exception {
-        String url = "jdbc:derby:zoo;create=true";
-        try (Connection conn = DriverManager.getConnection(url)) {
+//        String url = "jdbc:derby:zoo;create=true";
+        String url ="jdbc:mysql://localhost:3306/zoo";
+        String user = "root";
+        String password = "password";
+        try (Connection conn = DriverManager.getConnection(url,user,password)) {
 
 //             run(conn,"DROP TABLE names");
 //             run(conn,"DROP TABLE exhibits");

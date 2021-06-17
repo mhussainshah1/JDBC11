@@ -5,7 +5,7 @@ import java.sql.*;
 public class Execute {
     public static void main(String[] args) throws SQLException {
 
-        try (Connection conn = DriverManager.getConnection("jdbc:derby:zoo");
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/zoo", "root", "password");
              PreparedStatement ps = conn.prepareStatement("SELECT * from names")) {
             boolean isResultSet = ps.execute();
             if (isResultSet) {

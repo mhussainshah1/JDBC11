@@ -6,9 +6,12 @@ import java.sql.SQLException;
 public class TryCatchResources {
     public static void main(String[] args) throws SQLException {
 
-        var url = "jdbc:derby:zoo";
+//        var url = "jdbc:derby:zoo";
+        String url = "jdbc:mysql://localhost:3306/zoo";
+        String user = "root";
+        String password = "password";
         var sql = "SELECT COUNT(*) FROM names WHERE id = ?";
-        try (var conn = DriverManager.getConnection(url);    //1 - open conn
+        try (var conn = DriverManager.getConnection(url, user, password);    //1 - open conn
              var ps = conn.prepareStatement(sql)) {     //2 - open ps
             ps.setInt(1, 1);
 
@@ -24,6 +27,6 @@ public class TryCatchResources {
             }
             rs2.close();                                                //6 - close rs2
         }                                                               //7 - close ps
-                                                                        //8 - close conn
+        //8 - close conn
     }
 }
