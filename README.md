@@ -2,8 +2,8 @@
 
 This project has two branches
 
-#branch derby
+# branch derby
 use derby and HSQL
 
-#branch mysql
+# branch mysql
 use MySQL database
