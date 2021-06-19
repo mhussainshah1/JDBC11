@@ -1,11 +1,17 @@
 package connection;
-import java.sql.*;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
 public class TestConnect {
     public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        Class.forName("org.apache.derby.impl.jdbc.EmbedConnection");
-        Connection conn = DriverManager.getConnection("jdbc:derby:zoo");//jdbc:derby://localhost:1527/zoo
-        System.out.println(conn);
-        //org.apache.derby.impl.jdbc.EmbedConnection@406765571 (XID = 826), (SESSIONID = 1), (DATABASE = zoo), (DRDAID = null)
+        String url = "jdbc:mysql://localhost:3306/zoo";
+        String user = "root";
+        String password = "password";
+        Class.forName("com.mysql.cj.jdbc.ConnectionImpl");
+        try (Connection conn = DriverManager.getConnection(url, user, password)) {  //jdbc:mysql://localhost:3306/zoo
+            System.out.println(conn);//com.mysql.cj.jdbc.ConnectionImpl@16d04d3d
+        }
     }
 }

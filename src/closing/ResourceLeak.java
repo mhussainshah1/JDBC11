@@ -15,7 +15,6 @@ public class ResourceLeak {
     }
 
     public static void bad() throws SQLException{
-//        var url = "jdbc:derby:zoo";
         String url ="jdbc:mysql://localhost:3306/zoo";
         String user = "root";
         String password = "password";

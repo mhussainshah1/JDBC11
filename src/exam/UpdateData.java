@@ -23,8 +23,10 @@ import java.sql.*;
 public class UpdateData {
 
     public static void main(String[] args) throws SQLException {
-
-        try (Connection conn = DriverManager.getConnection("jdbc:derby:exam");
+        String url = "jdbc:mysql://localhost:3306/zoo";
+        String user = "root";
+        String password = "password";
+        try (Connection conn = DriverManager.getConnection(url,user,password);
              PreparedStatement ps = conn.prepareStatement("INSERT INTO EMP VALUES(?, ?, ?)")) {
             ps.setObject(1, 101, JDBCType.INTEGER);
             ps.setObject(2, "SMITH", JDBCType.VARCHAR);

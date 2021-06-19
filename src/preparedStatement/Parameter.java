@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 public class Parameter {
     public static void main(String[] args) throws SQLException {
+
         try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/zoo", "root", "password")) {
 //            register(conn);
 //            register(conn,7,1,"Meshoo");
