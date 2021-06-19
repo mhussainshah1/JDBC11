@@ -15,11 +15,11 @@ public class ExecuteUpdate {
         String password = "password";
         Connection conn = DriverManager.getConnection(url, user, password);
         Statement stmt = conn.createStatement();
-        int result = stmt.executeUpdate("insert into species values(10, 'Deer', 3)");
+        int result = stmt.executeUpdate("insert into names values(10, 'Deer', 3)");
         System.out.println(result); // 1
-        result = stmt.executeUpdate("update species set name = '' where name = 'None'");
+        result = stmt.executeUpdate("update names set name = '' where name = 'None'");
         System.out.println(result); // 0
-        result = stmt.executeUpdate("delete from species where id = 10");
+        result = stmt.executeUpdate("delete from names where id = 10");
         System.out.println(result); // 1       
     }
 }

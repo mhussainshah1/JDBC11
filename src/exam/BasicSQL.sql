@@ -1,5 +1,4 @@
-create table EMP
-(
+create table EMP(
     ID   INTEGER,
     NAME VARCHAR(20),
     DEPT VARCHAR(20)
@@ -17,16 +16,12 @@ VALUES (103, 'WEAVER', 'HR');
 select *
 from EMP;
 
-create table RECRUITING
-(
+create table RECRUITING(
     ID   INTEGER,
     NAME VARCHAR(20)
 );
 
-CREATE TABLE PAIR
-(
-    `LEFT`  VARCHAR
-(
-    10
-), `RIGHT` VARCHAR(10)
+CREATE TABLE PAIR(
+    `LEFT`  VARCHAR(10),
+    `RIGHT` VARCHAR(10)
 );
