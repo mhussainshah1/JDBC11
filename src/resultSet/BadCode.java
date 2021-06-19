@@ -9,7 +9,7 @@ public class BadCode {
         String url = "jdbc:mysql://localhost:3306/zoo";
         String user = "root";
         String password = "password";
-        Connection conn = DriverManager.getConnection(url,user,password);
+        Connection conn = DriverManager.getConnection(url, user, password);
         var sql = "SELECT COUNT(*) AS count FROM EXHIBITS";
         /*try (var ps = conn.prepareStatement(sql);
              var rs = ps.executeQuery()) {

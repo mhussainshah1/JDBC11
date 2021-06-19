@@ -9,10 +9,10 @@ import java.util.Map;
 public class Reading {
     public static void main(String[] args) throws SQLException {
         String url = "jdbc:mysql://localhost:3306/zoo";
-        String user=  "root";
+        String user = "root";
         String password = "password";
 
-        try(Connection conn = DriverManager.getConnection(url,user,password)){
+        try (Connection conn = DriverManager.getConnection(url, user, password)) {
             var sql = "SELECT id, name from exhibits";
             Map<Integer, String> idToNameMap = new HashMap<>();
             try (var ps = conn.prepareStatement(sql);
@@ -33,7 +33,7 @@ public class Reading {
             sql = "SELECT COUNT(*) FROM EXHIBITS";
             try (var ps = conn.prepareStatement(sql);
                  var rs = ps.executeQuery()) {
-                if(rs.next()){
+                if (rs.next()) {
                     int count = rs.getInt(1);//2
                     System.out.println(count);
                 }
@@ -44,7 +44,7 @@ public class Reading {
             sql = "SELECT COUNT(*) AS count FROM EXHIBITS";
             try (var ps = conn.prepareStatement(sql);
                  var rs = ps.executeQuery()) {
-                if(rs.next()){
+                if (rs.next()) {
                     var count = rs.getInt("count");//2
                     System.out.println(count);//2
                 }

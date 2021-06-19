@@ -4,15 +4,13 @@ import java.sql.DriverManager;
 import java.sql.JDBCType;
 import java.sql.SQLException;
 /**
- *
-  create database exam;
-  use exam;
-  create table EMP (ID INTEGER, Name_of_employee VARCHAR(20), DEPT VARCHAR(20));
-  INSERT into EMP VALUES(101,'SMITH','HR');
-  INSERT into EMP VALUES(102,'JONES','ENG');
-  INSERT into EMP VALUES(103,'WEAVER','HR');
-  select * from EMP;
-
+ * create database exam;
+ * use exam;
+ * create table EMP (ID INTEGER, Name_of_employee VARCHAR(20), DEPT VARCHAR(20));
+ * INSERT into EMP VALUES(101,'SMITH','HR');
+ * INSERT into EMP VALUES(102,'JONES','ENG');
+ * INSERT into EMP VALUES(103,'WEAVER','HR');
+ * select * from EMP;
  */
 
 /**
@@ -27,8 +25,8 @@ import java.sql.SQLException;
 public class MyPreparedStatement {
 
     public static void main(String[] args) throws SQLException {
-        try (var conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/exam","root","password");
-            // var delete = conn.prepareStatement("DELETE FROM RECRUITING");
+        try (var conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/exam", "root", "password");
+             // var delete = conn.prepareStatement("DELETE FROM RECRUITING");
              var query = conn.prepareStatement("SELECT ID, NAME FROM EMP WHERE DEPT = ?");//return 2 rows
              var update = conn.prepareStatement("INSERT INTO RECRUITING (ID , NAME) VALUES(?, ?)")) {//return 1 row
 

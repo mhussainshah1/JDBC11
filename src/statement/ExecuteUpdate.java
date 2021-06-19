@@ -13,9 +13,9 @@ public class ExecuteUpdate {
         String url = "jdbc:mysql://localhost:3306/zoo";
         String user = "root";
         String password = "password";
-        Connection conn = DriverManager.getConnection(url,user,password);
+        Connection conn = DriverManager.getConnection(url, user, password);
         Statement stmt = conn.createStatement();
-        int result = stmt.executeUpdate( "insert into species values(10, 'Deer', 3)");
+        int result = stmt.executeUpdate("insert into species values(10, 'Deer', 3)");
         System.out.println(result); // 1
         result = stmt.executeUpdate("update species set name = '' where name = 'None'");
         System.out.println(result); // 0

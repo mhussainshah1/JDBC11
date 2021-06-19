@@ -25,6 +25,8 @@ create table RECRUITING
 
 CREATE TABLE PAIR
 (
-    `LEFT`  VARCHAR(10),
-    `RIGHT` VARCHAR(10)
+    `LEFT`  VARCHAR
+(
+    10
+), `RIGHT` VARCHAR(10)
 );

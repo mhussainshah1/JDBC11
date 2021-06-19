@@ -11,7 +11,7 @@ public class OUTParameter {
         String password = "password";
 //        var sql = "{?= call magic_number(?) }";
         var sql = "{call magic_number(?) }";
-        try (var conn = DriverManager.getConnection(url,user,password);
+        try (var conn = DriverManager.getConnection(url, user, password);
              var cs = conn.prepareCall(sql)) {
             cs.registerOutParameter(1, Types.INTEGER);
             cs.execute();

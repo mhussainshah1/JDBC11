@@ -9,8 +9,8 @@ public class ExecuteQuery {
              PreparedStatement ps = conn.prepareStatement("SELECT * from names");
              ResultSet rs = ps.executeQuery()) {
 
-            while(rs.next()){
-                System.out.println(rs.getString(1)+ ", " + rs.getString(2)+ ", " + rs.getString(3));
+            while (rs.next()) {
+                System.out.println(rs.getString(1) + ", " + rs.getString(2) + ", " + rs.getString(3));
             }
         }
     }

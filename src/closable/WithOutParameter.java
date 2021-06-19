@@ -9,7 +9,7 @@ public class WithOutParameter {
         String user = "root";
         String password = "password";
         String sql = "{call read_e_names()}";
-        try (Connection conn = DriverManager.getConnection(url,user,password);
+        try (Connection conn = DriverManager.getConnection(url, user, password);
              CallableStatement cs = conn.prepareCall(sql);
              ResultSet rs = cs.executeQuery()) {
             while (rs.next()) {

@@ -2,23 +2,23 @@ package exam;
 
 import java.sql.*;
 
-/**   Assume ds is a DataSource and the EMP table is defined appropriately.
-
- Given the data of the EMP table:
- Before:
- ID NAME DEPT
- 101 SMITH HR
- 102 JONES ENG
- 103 WEAVER HR
-
- After:
- ID NAME DEPT
- 101 SMITH HR
- 102 JONES ENG
- 103 WEAVER HR
- 101 SMITH HR
- 102 JONES HR
-
+/**
+ * Assume ds is a DataSource and the EMP table is defined appropriately.
+ * <p>
+ * Given the data of the EMP table:
+ * Before:
+ * ID NAME DEPT
+ * 101 SMITH HR
+ * 102 JONES ENG
+ * 103 WEAVER HR
+ * <p>
+ * After:
+ * ID NAME DEPT
+ * 101 SMITH HR
+ * 102 JONES ENG
+ * 103 WEAVER HR
+ * 101 SMITH HR
+ * 102 JONES HR
  */
 public class UpdateData {
 
@@ -26,7 +26,7 @@ public class UpdateData {
         String url = "jdbc:mysql://localhost:3306/zoo";
         String user = "root";
         String password = "password";
-        try (Connection conn = DriverManager.getConnection(url,user,password);
+        try (Connection conn = DriverManager.getConnection(url, user, password);
              PreparedStatement ps = conn.prepareStatement("INSERT INTO EMP VALUES(?, ?, ?)")) {
             ps.setObject(1, 101, JDBCType.INTEGER);
             ps.setObject(2, "SMITH", JDBCType.VARCHAR);
